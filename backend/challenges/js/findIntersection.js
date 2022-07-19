@@ -18,15 +18,19 @@ function FindIntersection(strArr) {
    // code goes here
    let str1 = strArr[0]
    let str2 = strArr[1]
- 
-   
+
+
    str1 = str1.split(', ')
    str2 = str2.split(', ')
- 
- 
+
+
    let match = str1.filter(num => str2.indexOf(num) !== -1)
- 
+
+
    match = match.join().trim()
-   return match; 
- 
- }
+
+   if(match !== '') {
+      return match; 
+   } else return false
+
+}
