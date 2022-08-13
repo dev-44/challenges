@@ -1,0 +1,12 @@
+{
+   "findAndModify": "Collection_IZSG5",
+   "query": {
+      "Age": 25
+   },
+   "update": {
+      "$set": {
+         "canRent": true
+      }
+   },
+   "new": true
+}
