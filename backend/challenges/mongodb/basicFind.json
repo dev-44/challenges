@@ -1,0 +1,18 @@
+
+{
+   "find": "Collection_NPY8F",
+   "projection": {
+     "FirstName": 1,
+     "LastName": 1,
+     "Age": 1,
+     "_id": 0
+   },
+   "filter": {
+     "Age": {
+       "$gt": 25
+     }
+   },
+   "sort": {
+     "Age": 1
+   }
+ }
