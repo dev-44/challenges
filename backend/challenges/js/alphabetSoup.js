@@ -22,7 +22,7 @@
  ***************************************************************/
 
 function alphabetSoup(str){
-   return str.split('').sort().join('')
+   return str.toLowerCase().split('').sort().join('')
 }
 
 console.log(alphabetSoup('hello'))

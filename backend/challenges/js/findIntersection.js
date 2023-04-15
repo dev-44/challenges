@@ -7,7 +7,7 @@ Your goal is to return a comma-separated string containing the numbers that occu
 If there is no intersection, return the string false. 
 
 Examples
-Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+Input:   
 Output: 1,4,13
 Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
 Output: 1,9,10  
@@ -16,21 +16,19 @@ Output: 1,9,10
 function FindIntersection(strArr) { 
 
    // code goes here
-   let str1 = strArr[0]
-   let str2 = strArr[1]
+   let str1 = strArr[0].split(', ')
+   let str2 = strArr[1].split(', ')
+
+   let result = str1.filter(a => str2.find(b => b === a))
+   return result !== '' ? result.join('') : 'false'
+
+   //let match = str1.filter(num => str2.indexOf(num) !== -1)
 
 
-   str1 = str1.split(', ')
-   str2 = str2.split(', ')
-
-
-   let match = str1.filter(num => str2.indexOf(num) !== -1)
-
-
-   match = match.join().trim()
+/*    match = match.join().trim()
 
    if(match !== '') {
       return match; 
-   } else return false
+   } else return false */
 
 }
