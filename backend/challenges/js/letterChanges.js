@@ -14,26 +14,32 @@ Input: "fun times!"
 Output: gvO Ujnft! 
 */
 
-function LetterChanges(str) { 
+/* function LetterChanges(str) { 
 
-   // code goes here
-   let nextL = []
-   let alphabet = "abcdefghijklmnopqrstuvwxyz"
-   
-   for(let i=0; i < str.length; i++) {
-     if(alphabet.indexOf(str[i]) !== -1) {
-       var index = alphabet.indexOf(str[i])
-       nextL.push(alphabet[index + 1])
-     } else {
-       nextL.push(str[i])
-     }
-   }
- 
-   nextL = nextL.join('')
- 
-   let changed = nextL.replace(/[aeiou]/g, (v) => {
-     return v.toUpperCase()
-   })
- 
-   return changed
- }
+  // code goes here
+  let nextL = []
+  let alphabet = "abcdefghijklmnopqrstuvwxyz"
+  
+  for(let i=0; i < str.length; i++) {
+    if(alphabet.indexOf(str[i]) !== -1) {
+      var index = alphabet.indexOf(str[i])
+      nextL.push(alphabet[index + 1])
+    } else {
+      nextL.push(str[i])
+    }
+  }
+
+  nextL = nextL.join('')
+
+  let changed = nextL.replace(/[aeiou]/g, (v) => {
+    return v.toUpperCase()
+  })
+
+  return changed
+} */
+
+function LetterChanges (str) {
+  return result = str.split('').map(w => {
+    return alphabet.indexOf(w) !== -1 ? alphabet[alphabet.indexOf(w) + 1] : w
+  }).join('').replace(/[aeiou]/g, (v) => v.toUpperCase())
+}
