@@ -17,17 +17,22 @@ Output: false
 
 function SimpleSymbols(str) { 
 
-   // code goes here
-   for(let i=0; i< str.length; i++) {
-     let l = str[i]
-     if(/[a-z]/gi.test(l)) {
-       var index = str.indexOf(l)
-       if(str[index-1] !== '+' || str[index+1] !== '+') {
-         return false
-       }
-     }
-   }
-   
- 
-   return true
- }
+  // code goes here
+  for(let i=0; i< str.length; i++) {
+    let l = str[i]
+    if(/[a-z]/gi.test(l)) {
+      var index = str.indexOf(l)
+      if(str[index-1] !== '+' || str[index+1] !== '+') {
+        return false
+      }
+    }
+  }
+  
+
+  return true
+}
+
+function SimpleSymbols(str) {
+  let reWrongSequence = /([^+]|^)[a-z]|[a-z]([^+]|$)/i;
+  return !reWrongSequence.test(str);
+}

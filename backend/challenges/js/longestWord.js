@@ -15,24 +15,32 @@ function longestWord(str) {
 longestWord("This is a test.")
 */
 
+/* function LongestWord(sen) { 
+
+  // code goes here
+  var longest = ''
+  var maxlength = 0
+
+  sen = sen.replace(/[^0-9A-Za-z\s]+/g, '') 
+  let array = sen.split(' ')
+  array.forEach(word => {
+    if(word.length > maxlength) {
+      maxlength = word.length
+      longest = word
+    }
+  })
+
+  return longest
+
+} */
+
 function LongestWord(sen) { 
 
-   // code goes here
-   var longest = ''
-   var maxlength = 0
- 
-   sen = sen.replace(/[^0-9A-Za-z\s]+/g, '') 
-   let array = sen.split(' ')
-   array.forEach(word => {
-     if(word.length > maxlength) {
-       maxlength = word.length
-       longest = word
-     }
-   })
- 
-   return longest
- 
- }
+  return sen.replace(/[^0-9A-Za-z\s]+/g, '').split(' ').sort(function(a,b) {
+    return b.length - a.length
+  })[0]
+
+}
     
  // keep this function call here 
  console.log(LongestWord(readline()));
