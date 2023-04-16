@@ -5,13 +5,13 @@ and str2 is "world" the output should return true. Punctuation and symbols will 
 
 function StringScramble(str1,str2) {
 
-   for (var i = 0; i < str2.length; i++) {
-     if (str1.indexOf(str2[i]) == -1) {
-       return false;
-     }
-   }
-   return true;
- }
+  for (var i = 0; i < str2.length; i++) {
+    if (str1.indexOf(str2[i]) == -1) {
+      return false;
+    }
+  }
+  return true;
+}
 
 
- console.log(StringScramble("cdore", "coder"))
+console.log(StringScramble("cdore", "coder"))
