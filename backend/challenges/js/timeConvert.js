@@ -16,19 +16,19 @@ Output: 0:45
 
 function TimeConvert(num) { 
 
-   // code goes here
-   let hours = 0
-   let minutes = 0
- 
-   if(num/60 >= 1) {
-     hours = parseInt((num/60))
- 
-     minutes = num - (hours*60)
-     return hours.toString().concat(':').concat(minutes)
-   } else {
-     minutes = num
-     return hours.toString().concat(':').concat(minutes)
-   }
- 
- 
- }
+  // code goes here
+  let hours = 0
+  let minutes = 0
+
+  if(num/60 >= 1) {
+    hours = parseInt((num/60))
+
+    minutes = num - (hours*60)
+    return hours.toString().concat(':').concat(minutes)
+  } else {
+    minutes = num
+    return hours.toString().concat(':').concat(minutes)
+  }
+
+
+}

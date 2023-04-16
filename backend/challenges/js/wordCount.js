@@ -16,8 +16,10 @@
  ***************************************************************/
 
 function wordCount(str){
-   let string = str.trim().split(' ')
-   console.log(string.length)
+   // let string = str.trim().split(' ')
+   // console.log(string.length)
+
+   return str.split(' ').length
 }
 
 wordCount("Hello World")
